@@ -1,24 +1,109 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Menlo.ttc">
+            <string>Menlo-Bold</string>
+            <string>Menlo-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Scribe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZCb-7k-elJ">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="55"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SCRIBE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0rz-D8-tSk">
+                                        <rect key="frame" x="151.5" y="21" width="72.5" height="23.5"/>
+                                        <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="20"/>
+                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.58188301320000002" green="0.21569153669999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="0rz-D8-tSk" firstAttribute="centerY" secondItem="ZCb-7k-elJ" secondAttribute="centerY" constant="5" id="lD7-NA-H9L"/>
+                                    <constraint firstItem="0rz-D8-tSk" firstAttribute="centerX" secondItem="ZCb-7k-elJ" secondAttribute="centerX" id="ugD-81-u93"/>
+                                    <constraint firstAttribute="height" constant="55" id="yh4-oo-KOt"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Play &amp; Transcribe" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QUn-9t-x32">
+                                <rect key="frame" x="100.5" y="632" width="174" height="20"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="17"/>
+                                <color key="textColor" red="0.37055522200000002" green="0.37056469920000001" blue="0.37055957319999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Tap the button below to translate the audio embedded in this app." textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="QzX-Kx-mZo">
+                                <rect key="frame" x="15" y="70" width="345" height="472"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" red="0.37055522200000002" green="0.37056469920000001" blue="0.37055957319999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IKi-3B-L6K" customClass="CircleButton" customModule="Scribe" customModuleProvider="target">
+                                <rect key="frame" x="157.5" y="562" width="60" height="60"/>
+                                <color key="backgroundColor" red="0.58188301320000002" green="0.21569153669999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="Szd-e6-znA"/>
+                                    <constraint firstAttribute="width" constant="60" id="zDc-h7-qkR"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="30"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="playButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Cvm-os-0oX"/>
+                                </connections>
+                            </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="WgY-nY-PpV">
+                                <rect key="frame" x="157.5" y="562.5" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="IfM-th-nH6"/>
+                                    <constraint firstAttribute="height" constant="60" id="pUr-us-YR2"/>
+                                </constraints>
+                            </activityIndicatorView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="QzX-Kx-mZo" firstAttribute="top" secondItem="ZCb-7k-elJ" secondAttribute="bottom" constant="15" id="273-mp-ZAp"/>
+                            <constraint firstItem="QzX-Kx-mZo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="7ZD-Aa-0wg"/>
+                            <constraint firstItem="IKi-3B-L6K" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ENh-my-z57"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="QUn-9t-x32" secondAttribute="bottom" constant="15" id="H8J-FC-6pM"/>
+                            <constraint firstItem="WgY-nY-PpV" firstAttribute="centerX" secondItem="IKi-3B-L6K" secondAttribute="centerX" id="Lhw-iI-mo0"/>
+                            <constraint firstItem="IKi-3B-L6K" firstAttribute="top" secondItem="QzX-Kx-mZo" secondAttribute="bottom" constant="20" id="Mgs-zO-YHl"/>
+                            <constraint firstItem="WgY-nY-PpV" firstAttribute="centerY" secondItem="IKi-3B-L6K" secondAttribute="centerY" id="Wug-vG-h5Y"/>
+                            <constraint firstItem="QUn-9t-x32" firstAttribute="top" secondItem="IKi-3B-L6K" secondAttribute="bottom" constant="10" id="ZiP-9z-CJK"/>
+                            <constraint firstItem="ZCb-7k-elJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="eUA-Eo-oOW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="QzX-Kx-mZo" secondAttribute="trailing" constant="15" id="pwu-JW-duo"/>
+                            <constraint firstItem="ZCb-7k-elJ" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="wCf-Wn-rwu"/>
+                            <constraint firstItem="ZCb-7k-elJ" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="woQ-y2-gFg"/>
+                            <constraint firstItem="QUn-9t-x32" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zMi-jW-DhS"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="activitySpinner" destination="WgY-nY-PpV" id="gOB-fL-UVE"/>
+                        <outlet property="transcriptionTextField" destination="QzX-Kx-mZo" id="i6G-SM-W2T"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="140" y="133.5832083958021"/>
         </scene>
     </scenes>
 </document>
